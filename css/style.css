@@ -256,6 +256,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #f4f4ea;
+}
+.loader::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
   background-image: linear-gradient(
       197deg,
       rgba(39, 175, 144, 0.5) 0%,
