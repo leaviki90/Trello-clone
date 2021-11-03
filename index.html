@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <meta name="author" content="Violeta Petrović" />
+    <meta name="description" content="Trello Clone" />
+    <meta
+      name="keywords"
+      content="html, css, javascript, responsive, bootstrap5"
+    />
+
+    <!-- IOS compatibility -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Trello Clone" />
+    <link
+      rel="apple-touch-icon"
+      type="image/png"
+      href="apple-icon-144x144.png"
+    />
+
+    <!--Android compatibility-->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="aplication-name" content="Trello Clone" />
+    <link rel="icon" type="image/png" href="android-icon-192x192.png" />
+
+    <link rel="icon" type="image/png" href="favicon-32x32.png" />
+    <!-- font -->
+
+    <!-- style -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>Trello Clone</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="boards" id="boardsContainer">
+        <div class="boards-item">
+          <div class="title-container">
+            <span class="title" contenteditable="true">Backlog</span>
+            <span class="del-card-btn">X</span>
+          </div>
+          <div class="list">
+            <div class="list-item" draggable="true">1</div>
+            <div class="list-item" draggable="true">2</div>
+          </div>
+          <div class="form">
+            <textarea
+              class="textarea"
+              placeholder="Enter a card name"
+            ></textarea>
+            <div class="buttons">
+              <button class="add-item-btn">Add</button>
+              <button class="cancel-item-btn">Cancel</button>
+            </div>
+          </div>
+          <div class="add-btn"><span> + </span>Add a card</div>
+        </div>
+        <div class="boards-item">
+          <div class="title-container">
+            <span class="title" contenteditable="true">Todo</span>
+            <span class="del-card-btn">X</span>
+          </div>
+          <div class="list">
+            <div class="list-item" draggable="true">3</div>
+            <div class="list-item" draggable="true">4</div>
+          </div>
+          <div class="form">
+            <textarea
+              class="textarea"
+              placeholder="Enter a card name"
+            ></textarea>
+            <div class="buttons">
+              <button class="add-item-btn">Add</button>
+              <button class="cancel-item-btn">Cancel</button>
+            </div>
+          </div>
+          <div class="add-btn"><span> + </span>Add a card</div>
+        </div>
+        <div class="boards-item">
+          <div class="title-container">
+            <span class="title" contenteditable="true">Review</span>
+            <span class="del-card-btn">X</span>
+          </div>
+          <div class="list">
+            <div class="list-item" draggable="true">3</div>
+            <div class="list-item" draggable="true">4</div>
+          </div>
+          <div class="form">
+            <textarea
+              class="textarea"
+              placeholder="Enter a card name"
+            ></textarea>
+            <div class="buttons">
+              <button class="add-item-btn">Add</button>
+              <button class="cancel-item-btn">Cancel</button>
+            </div>
+          </div>
+          <div class="add-btn"><span> + </span>Add a card</div>
+        </div>
+        <div class="boards-item">
+          <div class="title-container">
+            <span class="title" contenteditable="true">Done</span>
+            <span class="del-card-btn">X</span>
+          </div>
+          <div class="list">
+            <div class="list-item" draggable="true">3</div>
+            <div class="list-item" draggable="true">4</div>
+          </div>
+          <div class="form">
+            <textarea
+              class="textarea"
+              placeholder="Enter a card name"
+            ></textarea>
+            <div class="buttons">
+              <button class="add-item-btn">Add</button>
+              <button class="cancel-item-btn">Cancel</button>
+            </div>
+          </div>
+          <div class="add-btn"><span> + </span>Add a card</div>
+        </div>
+      </div>
+
+      <div class="add-board-wrapper">
+        <div class="add-board">Add a board</div>
+      </div>
+      <div class="help">
+        <span
+          ><span class="help-q">?</span> To remove any list item double click on
+          it</span
+        >
+      </div>
+    </div>
+
+    <script src="main.js" type="text/javascript"></script>
+  </body>
+</html>

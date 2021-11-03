@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* font-family: 'Roboto', sans-serif; */
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100vh;
+  padding: 50px 0;
+  background-image: linear-gradient(
+      197deg,
+      rgba(39, 175, 144, 0.5) 0%,
+      rgba(82, 92, 91, 0.5) 100%
+    ),
+    url("./images/background-trello.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.app .boards {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.boards .boards-item {
+  display: flex;
+  flex-direction: column;
+  align-self: baseline;
+  max-width: 250px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0 15px;
+  padding: 10px;
+  transition: 0.3s all ease;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.title-container {
+  display: flex;
+}
+
+.boards-item .title {
+  padding: 5px;
+  color: #fff;
+  flex: 1 0 calc(100% - 25px);
+  max-width: calc(100% - 25px);
+  overflow: hidden;
+}
+
+.boards-item .del-card-btn {
+  color: rgba(255, 255, 255, 0.5);
+  width: 25px;
+  height: 25px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+}
+
+.boards-item .title:focus {
+  outline: 1px solid rgba(168, 168, 168, 0.45);
+}
+.boards-item .list {
+  min-height: 40px;
+}
+.list .list-item {
+  background-color: #fefefe;
+  border-radius: 3px;
+  padding: 10px;
+  text-align: center;
+  margin: 4px 0;
+  cursor: move;
+  font-weight: 400;
+  font-size: 1.4rem;
+  outline: none;
+  border: none;
+}
+.form {
+  border-radius: 3px;
+  margin-top: auto;
+  display: none;
+}
+.form .textarea {
+  resize: none;
+  height: 60px;
+  border-radius: 3px;
+  border: none;
+  background: #fff;
+  padding: 10px;
+  width: 100%;
+}
+.form .textarea:focus {
+  outline: none;
+}
+.buttons {
+  display: flex;
+}
+.buttons .add-item-btn {
+  background: rgb(13, 136, 218);
+  border: none;
+  height: 35px;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  width: 100%;
+}
+.buttons .cancel-item-btn {
+  padding: 0 10px;
+  background-color: rgb(160, 17, 12);
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  height: 35px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.add-btn {
+  height: 30px;
+  background: rgba(155, 155, 155, 0.3);
+  border-radius: 3px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  padding-left: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+.add-btn span {
+  font-size: 2rem;
+  margin-right: 10px;
+  color: #fff;
+}
+
+.add-board-wrapper {
+  position: relative;
+  margin-top: auto;
+  padding-top: 5px;
+}
+
+.add-board {
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(19, 130, 204, 0.62);
+  border: none;
+  width: 150px;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 3px;
+  font-size: 1.4rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.list {
+  background: #333;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.list-item {
+  padding: 1rem;
+  background-color: white;
+  border: 1px solid black;
+  cursor: move;
+}
+.list-item.dragging {
+  opacity: 0.5;
+}
+
+.help {
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.help-q {
+  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  width: 25px;
+  height: 25px;
+  background-color: rgba(255, 248, 220, 0.63);
+}
