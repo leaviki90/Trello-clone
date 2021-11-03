@@ -1,5 +1,6 @@
 const boardsContainer = document.getElementById("boardsContainer");
 const addBoard = document.querySelector(".add-board");
+const loader = document.querySelector(".loader");
 
 boardsContainer.addEventListener("dragstart", (e) => {
   const listI = e.target.closest(".list-item");
@@ -208,7 +209,10 @@ function writeToStorage(data) {
   }
 }
 
-window.addEventListener("load", readFromStorage);
+window.addEventListener("load", () => {
+  readFromStorage();
+  loader.style.display = "none";
+});
 
 function readFromStorage() {
   const dataFromStorage = localStorage.getItem("data");
