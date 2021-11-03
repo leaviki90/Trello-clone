@@ -157,7 +157,7 @@ body {
   width: 100%;
 }
 .buttons .cancel-item-btn {
-  padding: 0 10px;
+  padding: 7px 3px;
   background-color: rgb(160, 17, 12);
   border: none;
   cursor: pointer;
@@ -167,7 +167,6 @@ body {
   justify-content: center;
   align-items: center;
   width: 75px;
-  height: 35px;
   margin-left: auto;
   flex-shrink: 0;
 }
@@ -212,7 +211,6 @@ body {
 }
 
 .list {
-  background: #333;
   padding: 1rem;
   margin-top: 1rem;
 }

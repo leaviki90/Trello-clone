@@ -46,7 +46,7 @@ function getDragAfterElement(list, y) {
       const box = child.getBoundingClientRect();
 
       const offset = y - box.top - box.height / 2;
-      // console.log(offset);
+
       if (offset < 0 && offset > closest.offset) {
         return { offset: offset, element: child };
       } else {
@@ -187,7 +187,6 @@ function createData() {
     data.push({ index: index, title: title, items: listItemContent });
   });
 
-  console.log(data);
   writeToStorage(data);
 }
 
@@ -206,5 +205,48 @@ function isTest() {
 function writeToStorage(data) {
   if (isTest() === true) {
     localStorage.setItem("data", JSON.stringify(data));
+  }
+}
+
+window.addEventListener("load", readFromStorage);
+
+function readFromStorage() {
+  const dataFromStorage = localStorage.getItem("data");
+  if (dataFromStorage) {
+    document.getElementById("boardsContainer").innerHTML = "";
+  }
+  const parsedData = JSON.parse(dataFromStorage);
+
+  if (parsedData) {
+    parsedData.forEach((board) => {
+      const content = document.createElement("div");
+      content.className = "boards-item";
+
+      let listElements = "";
+      if (board.items.length !== 0) {
+        board.items.forEach((item) => {
+          listElements += `<div class="list-item" draggable="true">${item}</div>`;
+        });
+      }
+
+      content.innerHTML = `
+      <div class="title-container">
+        <span class="title" contenteditable="true">${board.title}</span>
+        <span class="del-card-btn">X</span>
+      </div>
+      <div class="list">
+          ${listElements}
+      </div>
+      <div class="form">
+          <textarea class="textarea" placeholder="Enter a card name"></textarea>
+          <div class="buttons">
+              <button class="add-item-btn">Add</button>
+              <button class="cancel-item-btn">Cancel</button>
+          </div>
+      </div>
+      <div class="add-btn"><span> + </span>Add a card</div>
+      `;
+      boardsContainer.appendChild(content);
+    });
   }
 }
